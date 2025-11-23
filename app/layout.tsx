@@ -29,7 +29,7 @@ export default function RootLayout({
     <html
       lang="ar"
       dir="rtl"
-      className={`${inter.variable} ${zain.variable} text-start`}
+      className={`${inter.variable} ${zain.variable} text-start bg-primary-50`}
     >
       <body>{children}</body>
     </html>

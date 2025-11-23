@@ -1,3 +1,4 @@
+import Footer from "@/components/global/Footer";
 import Header from "@/components/global/Header";
 
 export default function RootLayout({
@@ -9,6 +10,7 @@ export default function RootLayout({
     <section>
       <Header />
       <main className="overflow-hidden">{children}</main>
+      <Footer />
     </section>
   );
 }

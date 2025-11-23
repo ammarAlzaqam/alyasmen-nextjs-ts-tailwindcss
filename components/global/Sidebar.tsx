@@ -12,7 +12,7 @@ export default function Sidebar() {
       {/*//! open close button */}
       <button
         onClick={() => set(true)}
-        className="md:hidden group cursor-pointer w-[50px] md:w-[61px] h-[50px] md:h-[61px] flex items-center justify-center rounded-full bg-accent-700/70 backdrop-blur-[17.43px]"
+        className="gradient-border md:hidden group cursor-pointer w-[50px] md:w-[61px] h-[50px] md:h-[61px] flex items-center justify-center rounded-full bg-[#EEE7DD3D] backdrop-blur-[17.43px]"
       >
         <img
           src="/assets/header/menu.svg"

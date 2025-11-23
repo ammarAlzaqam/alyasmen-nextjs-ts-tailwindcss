@@ -20,7 +20,7 @@ const linksList: Link[] = [
   {
     Icon: AboutIcon,
     label: "من نحن",
-    route: "/about",
+    route: "/",
   },
   {
     Icon: ServicesIcon,

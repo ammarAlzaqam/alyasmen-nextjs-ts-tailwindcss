@@ -26,7 +26,7 @@ export interface SplitTextProps {
 
 export const Title: React.FC<SplitTextProps> = ({
   text,
-  className = "text-heading2 max-xs:text-[25px]! max-lg:text-[30px] text-secondary-500 pt-2",
+  className = "",
   delay = 100,
   duration = 2,
   ease = "power3.out",
@@ -161,7 +161,7 @@ export const Title: React.FC<SplitTextProps> = ({
       wordWrap: "break-word",
       willChange: "transform, opacity",
     };
-    const classes = `split-parent overflow-hidden inline-block whitespace-normal ${className}`;
+    const classes = `split-parent overflow-hidden inline-block whitespace-normal title text-secondary-500! ${className}`;
     switch (tag) {
       case "h1":
         return (
@@ -211,6 +211,21 @@ export const Title: React.FC<SplitTextProps> = ({
   return renderTag();
 };
 
-export const SubTitle = ({ text }: { text: string }) => (
-  <Title text={text} className="text-body max-xs:text-[18px]! max-lg:text-[20px] text-secondary-500 pt-0" ease="elastic.out" />
+export const SubTitle = ({
+  text,
+  className = "",
+  ease = "elastic.out",
+  duration = 2,
+}: {
+  text: string;
+  className?: string;
+  ease?: string | ((t: number) => number);
+  duration?: number;
+}) => (
+  <Title
+    text={text}
+    className={`subtitle text-secondary-500! ${className}`}
+    ease={ease}
+    duration={duration}
+  />
 );

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function HeroSec() {
   return (
-    <div className="bg-[url(/assets/hero-sec/bg.png)] bg-cover bg-bottom bg-no-repeat">
+    <div className="relative bg-[url(/assets/home/hero-sec/bg.png)] bg-cover bg-bottom bg-no-repeat">
       <div className="main-container min-h-dvh flex">
         <div className="w-full flex justify-center items-center gap-10 sm:gap-15 max-lg:flex-col">
           {/*//! Text  */}
@@ -22,14 +22,14 @@ export default function HeroSec() {
               ></SubTitle>
             </div>
             {/*//* button */}
-            <Button className="shrink animate__animated animate__flipInX w-full max-lg:py-7 lg:w-[512px] lg:h-[86px] rounded-[30px] text-body-bold! max-lg:text-[18px]! text-primary-50 bg-primary-500 hover:bg-primary-700 cursor-pointer focus:bg-secondary-500 focus:text-primary-500">
+            <Button className="btn animate__animated animate__flipInX w-full">
               <ShinyText text="اطلب خدمتك الآنِ" />
             </Button>
           </div>
 
           {/*//! Logo image */}
           <Image
-            src="/assets/hero-sec/logo.png"
+            src="/assets/home/hero-sec/logo.png"
             alt="logo-img"
             width={680}
             height={457}

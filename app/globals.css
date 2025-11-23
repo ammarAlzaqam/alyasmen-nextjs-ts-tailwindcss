@@ -24,8 +24,8 @@
   }
 
   ::selection {
-    color: var(--color-secondary-200);
-    background: var(--color-primary-600);
+    color: var(--color-secondary-500);
+    background: var(--color-primary-500);
   }
 }
 
@@ -202,10 +202,44 @@
     content: "";
     @apply -z-1 absolute inset-0 bg-accent-900/50;
   }
+
+  .gradient-border {
+    @apply z-2 relative;
+  }
+  .gradient-border::after {
+    content: "";
+    @apply -z-1 absolute inset-0 rounded-[30px];
+    border: 1px solid transparent;
+    background: linear-gradient(to right, #999999, #FFFFFF) border-box;
+    -webkit-mask: linear-gradient(#FFFFFF 0 0) padding-box,
+      linear-gradient(#FFFFFF 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
 }
 
 @layer components {
   .main-container {
     @apply max-w-[1293px] mx-auto px-5;
+  }
+
+  .head-text {
+    @apply text-heading1 mb-12 max-xs:text-[75px]! max-lg:text-[100px] text-primary-50;
+  }
+
+  .title {
+    @apply text-heading2 max-xs:text-[25px]! max-lg:text-[30px] text-primary-50 pt-2;
+  }
+
+  .subtitle {
+    @apply text-body max-xs:text-[18px]! max-lg:text-[20px] text-primary-50 pt-0;
+  }
+
+  .btn {
+    @apply max-lg:py-7! lg:h-[86px]! rounded-[30px]! text-body-bold! max-lg:text-[18px]! text-primary-50! bg-primary-500! hover:bg-primary-700! cursor-pointer focus:bg-secondary-300! focus:text-primary-500!;
+  }
+
+  .btn-light {
+    @apply max-lg:py-7! lg:h-[86px]! rounded-[30px]! text-body-bold! max-lg:text-[18px]! text-primary-500! bg-primary-50! hover:bg-primary-200! cursor-pointer focus:bg-secondary-500! focus:text-primary-700!;
   }
 }
