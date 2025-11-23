@@ -1,0 +1,211 @@
+@config "../tailwind.config.ts";
+
+@plugin "tailwindcss-animate";
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer base {
+  * {
+    transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  button {
+    @apply font-heading;
+  }
+
+  p,
+  body,
+  span,
+  input {
+    @apply font-body;
+  }
+
+  ::selection {
+    color: var(--color-secondary-200);
+    background: var(--color-primary-600);
+  }
+}
+
+:root {
+  --primary-50: #f3f4f0;
+  --primary-100: #e7eae1;
+  --primary-200: #cfd5c3;
+  --primary-300: #b7bfa6;
+  --primary-400: #9faa88;
+  --primary-500: #87956a;
+  --primary-600: #6c7755;
+  --primary-700: #515940;
+  --primary-800: #363c2a;
+  --primary-900: #1b1e15;
+  --primary-950: #0d0f0b;
+
+  --secondary-50: #f6f3ee;
+  --secondary-100: #eee7dd;
+  --secondary-200: #ddd0bb;
+  --secondary-300: #ccb899;
+  --secondary-400: #bba177;
+  --secondary-500: #ede6db;
+  --secondary-600: #886e44;
+  --secondary-700: #665233;
+  --secondary-800: #443722;
+  --secondary-900: #221b11;
+  --secondary-950: #110e09;
+
+  --accent-50: #f2f2f2;
+  --accent-100: #e6e6e6;
+  --accent-200: #cccccc;
+  --accent-300: #b3b3b3;
+  --accent-400: #999999;
+  --accent-500: #2b2b2b;
+  --accent-600: #666666;
+  --accent-700: #4d4d4d;
+  --accent-800: #333333;
+  --accent-900: #1a1a1a;
+  --accent-950: #0d0d0d;
+
+  /* 🎯 الأساسيات */
+  --primary: #e2a03c;
+  --primary-foreground: #ffffff;
+
+  --secondary: #90410b;
+  --secondary-foreground: #ffffff;
+
+  --accent: #e2a03c;
+  --accent-foreground: #131122;
+
+  --destructive: #ff4b4b;
+  --destructive-foreground: #ffffff;
+
+  /* 🖤 الخلفيات */
+  --background: #131122;
+  --foreground: #dbdbdb;
+
+  --card: #1c1b2a;
+  --card-foreground: #dbdbdb;
+
+  --popover: #252430;
+  --popover-foreground: #dbdbdb;
+
+  /* ⚙️ العناصر الثانوية */
+  --muted: #1c1b2a;
+  --muted-foreground: #b5b5b5;
+
+  --border: #252430;
+  --input: #252430;
+  --ring: #e2a03c;
+
+  /* 🧮 الألوان التوضيحية (Charts) */
+  --chart-1: #e2a03c;
+  --chart-2: #90410b;
+  --chart-3: #ff4b4b;
+  --chart-4: #b5b5b5;
+  --chart-5: #252430;
+
+  /* 🧭 السايدبار */
+  --sidebar: #1c1b2a;
+  --sidebar-foreground: #dbdbdb;
+  --sidebar-primary: #e2a03c;
+  --sidebar-primary-foreground: #131122;
+  --sidebar-accent: #90410b;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #252430;
+  --sidebar-ring: #e2a03c;
+
+  /* 💠 الإضافات */
+  --radius: 0.625rem;
+}
+
+@theme {
+  --color-primary-50: #f3f4f0;
+  --color-primary-100: #e7eae1;
+  --color-primary-200: #cfd5c3;
+  --color-primary-300: #b7bfa6;
+  --color-primary-400: #9faa88;
+  --color-primary-500: #87956a;
+  --color-primary-600: #6c7755;
+  --color-primary-700: #515940;
+  --color-primary-800: #363c2a;
+  --color-primary-900: #1b1e15;
+  --color-primary-950: #0d0f0b;
+
+  --color-secondary-50: #f6f3ee;
+  --color-secondary-100: #eee7dd;
+  --color-secondary-200: #ddd0bb;
+  --color-secondary-300: #ccb899;
+  --color-secondary-400: #bba177;
+  --color-secondary-500: #ede6db;
+  --color-secondary-600: #886e44;
+  --color-secondary-700: #665233;
+  --color-secondary-800: #443722;
+  --color-secondary-900: #221b11;
+  --color-secondary-950: #110e09;
+
+  --color-accent-50: #f2f2f2;
+  --color-accent-100: #e6e6e6;
+  --color-accent-200: #cccccc;
+  --color-accent-300: #b3b3b3;
+  --color-accent-400: #999999;
+  --color-accent-500: #2b2b2b;
+  --color-accent-600: #666666;
+  --color-accent-700: #4d4d4d;
+  --color-accent-800: #333333;
+  --color-accent-900: #1a1a1a;
+  --color-accent-950: #0d0d0d;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer utilities {
+  .bg-overlay {
+    @apply z-2 relative;
+  }
+  .bg-overlay::after {
+    content: "";
+    @apply -z-1 absolute inset-0 bg-accent-900/50;
+  }
+}
+
+@layer components {
+  .main-container {
+    @apply max-w-[1293px] mx-auto px-5;
+  }
+}
