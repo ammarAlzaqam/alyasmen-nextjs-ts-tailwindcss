@@ -2,6 +2,7 @@ import ShinyText from "@/components/shared/ShinyText";
 import { SubTitle, Title } from "@/components/shared/SplitText";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSec() {
   return (
@@ -22,9 +23,11 @@ export default function HeroSec() {
               ></SubTitle>
             </div>
             {/*//* button */}
-            <Button className="btn animate__animated animate__flipInX w-full">
-              <ShinyText text="اطلب خدمتك الآنِ" />
-            </Button>
+            <Link href="/contact">
+              <Button className="btn animate__animated animate__flipInX w-full">
+                <ShinyText text="اطلب خدمتك الآنِ" />
+              </Button>
+            </Link>
           </div>
 
           {/*//! Logo image */}

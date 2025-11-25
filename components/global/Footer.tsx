@@ -48,8 +48,8 @@ export default function Footer() {
             <div className="flex flex-wrap gap-2">
               {mediaLinks.map(({ route, label, Icon }) => (
                 <Link title={label} key={label} href={route} className="text-base text-white">
-                  <button className="cursor-pointer rounded-full p-2 border-[1.5px] border-white/25">
-                    <Icon className="text-white size-4" />
+                  <button className="group cursor-pointer rounded-full p-2 border-[1.5px] border-white/25">
+                    <Icon className="text-white size-4 group-hover:text-secondary-200" />
                   </button>
                 </Link>
               ))}
@@ -59,7 +59,7 @@ export default function Footer() {
           {/*//!Contact email */}
           <div className="space-y-3">
             <h2 className="text-base-bold text-white">تواصل</h2>
-            <Link href="" className="text-base text-white opacity-75">
+            <Link href="" className="text-base text-white opacity-75 hover:text-secondary-200">
               @alyasmeen.com
             </Link>
           </div>

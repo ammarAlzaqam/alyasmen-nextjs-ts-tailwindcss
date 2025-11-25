@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutSec() {
   return (
@@ -17,9 +18,7 @@ export default function AboutSec() {
               className="-z-1 absolute top-0 md:top-4 left-1/2 -translate-x-1/2 lg:-translate-x-1/5 max-md:w-[250px]"
             />
 
-            <h1 className="head-text">
-              من نحن؟
-            </h1>
+            <h1 className="head-text">من نحن؟</h1>
             <h2 className="title">
               الياسمين للأعمال الهندسية
               والتشطيبـــــــــــــــــــــــــــــــــــــــــــــــــــــات
@@ -32,7 +31,9 @@ export default function AboutSec() {
               مصممه خصيصا لتلبية احتياجاتهم وتفضيلاتهم الخاصة , هدفنا هو حمايه
               العميل من اي استغلال محتمل او ممارسات هـــــــــــــــواه. 
             </h3>
-            <Button className="btn-light w-full!">تطلع على خدماتنا</Button>
+            <Link href="/services">
+              <Button className="btn-light w-full!">تطلع على خدماتنا</Button>
+            </Link>
           </div>
           <div className="">
             <Image

@@ -3,10 +3,13 @@
 @plugin "tailwindcss-animate";
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "aos/dist/aos.css";
 
 @layer base {
   * {
     transition: color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
   }
 
   h1,
@@ -25,7 +28,42 @@
 
   ::selection {
     color: var(--color-secondary-500);
-    background: var(--color-primary-500);
+    background: var(--color-primary-800);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-accent-500);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      180deg,
+      var(--color-secondary-500),
+      var(--color-primary-500)
+    );
+    border-radius: 10px;
+    border: 2px solid var(--color-primary-900);
+    box-shadow: 0 0 6px #1e293b;
+    transition: all 0.3s ease-in-out;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(
+      180deg,
+      var(--color-secondary-500),
+      var(--color-primary-500)
+    );
+    box-shadow: 0 0 10px var(--color-primary-500);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--color-primary-900);
   }
 }
 
@@ -194,7 +232,24 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @layer utilities {
+  .animate-open_close {
+    @apply transition-all duration-300;
+  }
+
+  .animate-open_close[data-state="false"] {
+    @apply scale-0 opacity-0 rotate-45 -translate-7;
+  }
+
   .bg-overlay {
     @apply z-2 relative;
   }
@@ -210,9 +265,9 @@
     content: "";
     @apply -z-1 absolute inset-0 rounded-[30px];
     border: 1px solid transparent;
-    background: linear-gradient(to right, #999999, #FFFFFF) border-box;
-    -webkit-mask: linear-gradient(#FFFFFF 0 0) padding-box,
-      linear-gradient(#FFFFFF 0 0);
+    background: linear-gradient(to right, #999999 40%, #ffffff) border-box;
+    -webkit-mask: linear-gradient(#999999 0 0) padding-box,
+      linear-gradient(#ffffff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
   }
@@ -236,10 +291,22 @@
   }
 
   .btn {
-    @apply max-lg:py-7! lg:h-[86px]! rounded-[30px]! text-body-bold! max-lg:text-[18px]! text-primary-50! bg-primary-500! hover:bg-primary-700! cursor-pointer focus:bg-secondary-300! focus:text-primary-500!;
+    @apply max-lg:py-7! lg:h-[86px]! rounded-[30px]! text-body-bold! max-lg:text-[18px]! text-primary-50! bg-primary-500! hover:bg-primary-700! cursor-pointer focus:bg-secondary-200! focus:text-primary-500! focus:text-shadow-xs! focus:text-shadow-primary-700/80!;
   }
 
   .btn-light {
     @apply max-lg:py-7! lg:h-[86px]! rounded-[30px]! text-body-bold! max-lg:text-[18px]! text-primary-500! bg-primary-50! hover:bg-primary-200! cursor-pointer focus:bg-secondary-500! focus:text-primary-700!;
+  }
+
+  .service-head_text {
+    @apply text-[55px] sm:text-[70px] font-[700] leading-[120%] text-secondary-100;
+  }
+
+  .service-title {
+    @apply text-[25px] md:text-[35px] font-[700] leading-[130%] text-primary-50 border-r-[6px] sm:border-[6px] border-dashed border-primary-50 rounded-[30px] w-fit px-4 py-2;
+  }
+
+  .form-input {
+    @apply border-b-3 w-full placeholder:text-primary-700 border-b-primary-500 pr-1 pb-5 text-body max-xs:text-[18px]! max-lg:text-[20px] text-primary-700 focus:outline-none;
   }
 }

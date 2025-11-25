@@ -7,12 +7,12 @@ interface ShinyTextProps {
   className?: string;
 }
 
-const ShinyText: React.FC<ShinyTextProps> = ({ text, disabled = false, speed = 5, className = '' }) => {
+const ShinyText: React.FC<ShinyTextProps> = ({ text, disabled = false, speed = 3, className = '' }) => {
   const animationDuration = `${speed}s`;
 
   return (
     <div
-      className={`text-secondary-500/90 bg-clip-text inline-block ${disabled ? '' : 'animate-shine'} ${className}`}
+      className={`text-secondary-500/70 bg-clip-text inline-block ${disabled ? '' : 'animate-shine'} ${className}`}
       style={{
         backgroundImage:
           'linear-gradient(120deg, rgba(255, 255, 255, 0) 40%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 60%)',

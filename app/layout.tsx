@@ -1,5 +1,6 @@
+import AosProvider from "@/components/providers/AosProvider";
 import "./globals.css";
-import 'animate.css';
+import "animate.css";
 
 import { Inter, Zain } from "next/font/google";
 export const metadata = {
@@ -31,7 +32,9 @@ export default function RootLayout({
       dir="rtl"
       className={`${inter.variable} ${zain.variable} text-start bg-primary-50`}
     >
-      <body>{children}</body>
+      <body>
+        <AosProvider>{children}</AosProvider>
+      </body>
     </html>
   );
 }

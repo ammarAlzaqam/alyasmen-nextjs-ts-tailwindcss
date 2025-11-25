@@ -10,62 +10,52 @@ export default function NavigationLinks() {
       {linksList.map(({ label, route }) => {
         const isActive =
           (pathname.includes(route) && route !== "/") || pathname === route;
-        return (
-          <>
-            {isActive ? (
-              <button
-                className="cursor-pointer rounded-[30px] px-4 py-2 bg-primary-500"
-                key={label}
-                onClick={() => {
-                  if (label === "من نحن" && pathname === "/") {
-                    scrollTo({ left: 0, top: 1000, behavior: "smooth" });
-                  }
-                  else if (label === "من نحن" && pathname !== "/") {
-                    setTimeout(
-                      () =>
-                        scrollTo({ left: 0, top: 1000, behavior: "smooth" }),
-                      700
-                    );
-                  } else {
-                    scrollTo({ left: 0, top: 0, behavior: "smooth" });
-                  }
-                }}
-              >
-                <h3 className="text-[24px] text-primary-50 font-link font-[400] leading-[100%]">
-                  {label}
-                </h3>
-              </button>
-            ) : (
-              <Link
-                className={cn(
-                  "rounded-[30px] px-4 py-2",
-                  isActive ? "bg-primary-500" : "hover:bg-accent-400"
-                )}
-                href={route}
-                key={label}
-                onClick={() => {
-                  if (label === "من نحن" && pathname === "/") {
-                    setTimeout(
-                      () =>
-                        scrollTo({ left: 0, top: 1000, behavior: "smooth" }),
-                      500
-                    );
-                  }
-                  if (label === "من نحن" && pathname !== "/") {
-                    setTimeout(
-                      () =>
-                        scrollTo({ left: 0, top: 1000, behavior: "smooth" }),
-                      1000
-                    );
-                  }
-                }}
-              >
-                <h3 className="text-[24px] text-primary-50 font-link font-[400] leading-[100%]">
-                  {label}
-                </h3>
-              </Link>
+        return isActive ? (
+          <button
+            className="cursor-pointer rounded-[30px] px-4 py-2 bg-primary-500"
+            key={label}
+            onClick={() => {
+              if (label === "من نحن" && pathname === "/") {
+                scrollTo({ left: 0, top: innerHeight, behavior: "smooth" });
+              } else if (label === "من نحن" && pathname !== "/") {
+                setTimeout(
+                  () => scrollTo({ left: 0, top: innerHeight, behavior: "smooth" }),
+                  500
+                );
+              } else {
+                scrollTo({ left: 0, top: 0, behavior: "smooth" });
+              }
+            }}
+          >
+            <h3 className="text-[24px] text-primary-50 font-link font-[400] leading-[100%]">
+              {label}
+            </h3>
+          </button>
+        ) : (
+          <Link
+            className={cn(
+              "rounded-[30px] px-4 py-2",
+              isActive ? "bg-primary-500" : "hover:bg-accent-400"
             )}
-          </>
+            href={route}
+            key={label}
+            onClick={() => {
+              if (label === "من نحن" && pathname === "/") {
+                scrollTo({ left: 0, top: innerHeight, behavior: "smooth" });
+              }
+              if (label === "من نحن" && pathname !== "/") {
+                setTimeout(
+                  () =>
+                    scrollTo({ left: 0, top: innerHeight, behavior: "smooth" }),
+                  500
+                );
+              }
+            }}
+          >
+            <h3 className="text-[24px] text-primary-50 font-link font-[400] leading-[100%]">
+              {label}
+            </h3>
+          </Link>
         );
       })}
     </div>

@@ -12,20 +12,16 @@ export default function Sidebar() {
       {/*//! open close button */}
       <button
         onClick={() => set(true)}
-        className="gradient-border md:hidden group cursor-pointer w-[50px] md:w-[61px] h-[50px] md:h-[61px] flex items-center justify-center rounded-full bg-[#EEE7DD3D] backdrop-blur-[17.43px]"
+        className="gradient-border md:hidden group cursor-pointer w-[45px] md:w-[61px] h-[45px] md:h-[61px] flex items-center justify-center rounded-full bg-[#EEE7DD3D] backdrop-blur-[17.43px]"
       >
-        <img
-          src="/assets/header/menu.svg"
-          alt="logo-img"
-        />
+        <img src="/assets/header/menu.svg" alt="logo-img" />
       </button>
 
       {/*//! Layout closer */}
       <div
         className={cn(
           "fixed z-50 top-0 right-0 h-dvh w-dvw max-w-[calc(2*dvw)] bg-primary-900/80 transition-all duration-300",
-          !open &&
-            "-translate-x-[100dvw] scale-0 opacity-0"
+          !open && "-translate-x-[100dvw] scale-0 opacity-0"
         )}
         onClick={() => set(false)}
       />
@@ -46,7 +42,19 @@ export default function Sidebar() {
             return (
               <button
                 onClick={() => {
-                  router.push(route);
+                  if (!isActive) router.push(route);
+
+                  if (label === "من نحن" && pathname === "/") {
+                    scrollTo({ left: 0, top: innerHeight, behavior: "smooth" });
+                  } else if (label === "من نحن" && pathname !== "/") {
+                    setTimeout(
+                      () =>
+                        scrollTo({ left: 0, top: innerHeight, behavior: "smooth" }),
+                      500
+                    );
+                  } else {
+                    scrollTo({ left: 0, top: 0, behavior: "smooth" });
+                  }
                   set(false);
                 }}
                 key={label}
