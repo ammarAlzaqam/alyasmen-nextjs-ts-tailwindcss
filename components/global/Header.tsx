@@ -45,7 +45,7 @@ export default function Header() {
           <FaWhatsapp
             className={cn(
               "size-8 transition-all group-hover:scale-130 group-focus:text-primary-50",
-              isScroll ? "text-primary-600" : "text-primary-50"
+              isScroll ? "text-primary-300" : "text-primary-50"
             )}
           />
         </button>

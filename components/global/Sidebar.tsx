@@ -49,7 +49,11 @@ export default function Sidebar() {
                   } else if (label === "من نحن" && pathname !== "/") {
                     setTimeout(
                       () =>
-                        scrollTo({ left: 0, top: innerHeight, behavior: "smooth" }),
+                        scrollTo({
+                          left: 0,
+                          top: innerHeight,
+                          behavior: "smooth",
+                        }),
                       500
                     );
                   } else {
@@ -60,7 +64,9 @@ export default function Sidebar() {
                 key={label}
                 className={cn(
                   "cursor-pointer flex items-center p-2 rounded-xl text-secondary-500 hover:bg-secondary-500 hover:text-primary-500!",
-                  isActive && "bg-secondary-500 text-primary-500"
+                  isActive &&
+                    label !== "من نحن" &&
+                    "bg-secondary-500 text-primary-500"
                 )}
               >
                 <Icon className="size-9 sm:size-12 shrink-0" />

@@ -29,7 +29,7 @@ interface LightRaysProps {
   className?: string;
 }
 
-const DEFAULT_COLOR = '#859368';
+const DEFAULT_COLOR = 'white';
 
 const hexToRgb = (hex: string): [number, number, number] => {
   const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -92,7 +92,7 @@ const LightRays: React.FC<LightRaysProps> = ({
   pulsating = false,
   fadeDistance = 1.0,
   saturation = 1.0,
-  followMouse = true,
+  followMouse = false,
   mouseInfluence = 0.1,
   noiseAmount = 0.0,
   distortion = 0.0,

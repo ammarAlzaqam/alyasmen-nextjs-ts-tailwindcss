@@ -37,7 +37,7 @@ export default function AboutSec() {
           </div>
           <div className="">
             <Image
-              src="/assets/home/about-sec/side.png"
+              src="/assets/home/about-sec/side2.png"
               alt="al-yasmeen"
               width={998.3995361328125}
               height={616.1465454101562}

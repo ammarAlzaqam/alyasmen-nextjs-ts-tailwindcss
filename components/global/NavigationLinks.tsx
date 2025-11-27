@@ -12,14 +12,18 @@ export default function NavigationLinks() {
           (pathname.includes(route) && route !== "/") || pathname === route;
         return isActive ? (
           <button
-            className="cursor-pointer rounded-[30px] px-4 py-2 bg-primary-500"
+            className={cn(
+              "cursor-pointer rounded-[30px] px-4 py-2",
+              label !== "من نحن" && "bg-primary-500"
+            )}
             key={label}
             onClick={() => {
               if (label === "من نحن" && pathname === "/") {
                 scrollTo({ left: 0, top: innerHeight, behavior: "smooth" });
               } else if (label === "من نحن" && pathname !== "/") {
                 setTimeout(
-                  () => scrollTo({ left: 0, top: innerHeight, behavior: "smooth" }),
+                  () =>
+                    scrollTo({ left: 0, top: innerHeight, behavior: "smooth" }),
                   500
                 );
               } else {

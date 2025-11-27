@@ -26,7 +26,7 @@ export default function ServicesPage() {
 
 const AboutHeroSec = () => {
   return (
-    <div className="bg-[url(/assets/services/hero-sec/bg.png)] min-h-dvh bg-no-repeat bg-cover bg-bottom">
+    <div className="bg-[url(/assets/services/hero-sec/bg2.png)] min-h-dvh bg-no-repeat bg-cover bg-bottom">
       <div className="main-container">
         <div className="pt-32 md:pt-48 pb-18 md:pb-24 space-y-9 md:space-y-14">
           {/*//! Text  */}
@@ -99,7 +99,7 @@ const ServicesSec = () => {
                 raysOrigin={i % 2 === 0 ? "top-right" : "top-left"}
               />
               <img src={icon} alt={`${title}-image`} />
-              <h3 className="subtitle font-[700]">{title}</h3>
+              <h3 className="subtitle text-white font-[700]">{title}</h3>
               <p className="text-[14px] sm:text-[16px] text-[#F6F6F6] font-[300] line-clamp-5">
                 {des}
               </p>

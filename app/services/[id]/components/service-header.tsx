@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { TbArrowBackUp } from "react-icons/tb";
 
 export default function ServiceHeader() {
   const [isScroll, setIsScroll] = useState(false);
@@ -36,7 +37,7 @@ export default function ServiceHeader() {
           <h2 className="subtitle max-sm:hidden text-primary-500 font-[700] group-hover:opacity-60 focus-opacity-60">
             الرجوع إلى الخلف
           </h2>
-          <img className="size-5 group-hover:opacity-60 focus-opacity-60" src="/assets/service/header/arrow.svg" />
+          <TbArrowBackUp className="size-7 group-hover:opacity-60 focus-opacity-60" />
         </Link>
       </div>
     </div>
