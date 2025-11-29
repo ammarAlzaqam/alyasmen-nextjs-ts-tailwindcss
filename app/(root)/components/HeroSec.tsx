@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function HeroSec() {
   return (
-    <div className="bg-overlay relative bg-[url(/assets/home/hero-sec/bg2.png)] bg-cover bg-bottom bg-no-repeat">
+    <div className="bg-overlay z-2 relative bg-[url(/assets/home/hero-sec/bg2.png)] bg-cover bg-bottom bg-no-repeat">
       <div className="main-container min-h-dvh flex">
         <div className="w-full flex justify-center items-center gap-10 sm:gap-15 max-lg:flex-col">
           {/*//! Text  */}

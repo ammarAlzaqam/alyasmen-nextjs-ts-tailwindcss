@@ -20,7 +20,7 @@ module.exports = {
       heading3: [
         "50px",
         {
-          lightHeight: "100%",
+          lineHeight: "100%",
           fontWeight: "500",
         },
       ],

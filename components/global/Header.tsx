@@ -41,14 +41,14 @@ export default function Header() {
 
         <Sidebar />
 
-        <button className="gradient-border max-md:hidden group cursor-pointer w-[50px] sm:w-[61px] h-[50px] sm:h-[61px] flex items-center justify-center rounded-full bg-[#EEE7DD3D] backdrop-blur-[17.43px]">
+        <Link href="https://wa.me/message/KFBIKLV33HYGF1" className="gradient-border max-md:hidden group cursor-pointer w-[50px] sm:w-[61px] h-[50px] sm:h-[61px] flex items-center justify-center rounded-full bg-[#EEE7DD3D] backdrop-blur-[17.43px]">
           <FaWhatsapp
             className={cn(
               "size-8 transition-all group-hover:scale-130 group-focus:text-primary-50",
               isScroll ? "text-primary-300" : "text-primary-50"
             )}
           />
-        </button>
+        </Link>
       </div>
     </header>
   );

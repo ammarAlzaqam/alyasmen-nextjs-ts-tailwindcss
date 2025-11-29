@@ -33,10 +33,10 @@ export default function Popup() {
 
   const transApi = useSpringRef();
   const transition = useTransition(
-    open ? Array.from({ length: 45 }, (_, i) => i) : [],
+    open ? Array.from({ length: 99 }, (_, i) => i) : [],
     {
       ref: transApi,
-      trail: 400 / Array.from({ length: 45 }, (_, i) => i).length,
+      trail: 400 / Array.from({ length: 96 }, (_, i) => i).length,
       from: { opacity: 0, scale: 0 },
       enter: { opacity: 1, scale: 1 },
       leave: { opacity: 0, scale: 0 },
@@ -103,20 +103,7 @@ export default function Popup() {
             className="aspect-square"
             style={{
               ...style,
-              background: `url(/favorite/${
-                item + 1
-              }.jpg) center/cover no-repeat`,
-            }}
-          />
-        ))}
-
-        {transition((style, item) => (
-          <animated.div
-            key={item}
-            className="aspect-square"
-            style={{
-              ...style,
-              background: `url(/real-projects/${
+              background: `url(/projects/${
                 item + 1
               }.jpg) center/cover no-repeat`,
             }}

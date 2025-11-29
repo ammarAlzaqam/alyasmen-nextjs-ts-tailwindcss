@@ -12,7 +12,7 @@ export default function ContactPage() {
 
       <div className="rounded-[30px] bg-primary-50 relative main-container px-0 max-xl:mx-5">
         <div className="px-7 sm:px-20 pt-7 pb-32 space-y-18">
-          <h1 className="service-head_text text-primary-500 text-center">
+          <h1 className="service-head_text max-sm:text-[45px] text-primary-500 text-center">
             تواصل معنا
           </h1>
 
@@ -62,10 +62,10 @@ export default function ContactPage() {
                   تواصل معنا الآن
                 </Button>
 
-                <div className="flex gap-15">
+                <div className="flex gap-7 sm:gap-9 sm:flex-wrap">
                   {mediaLinks.map(({ Icon, route }, i) => (
                     <Link key={route + i} href={route} className="group">
-                      <Icon className="text-primary-500 size-12 group-hover:scale-110 transition-all duration-300" />
+                      <Icon className="text-primary-500 size-9 sm:size-11 group-hover:scale-110 transition-all duration-300" />
                     </Link>
                   ))}
                 </div>

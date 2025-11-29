@@ -1,9 +1,6 @@
-import GridDistortion from "@/components/GridDistortion";
-import { Button } from "@/components/ui/button";
 import { Service } from "@/constants/servicesCard";
 import QuickStart from "./QuickStart";
-import ProjectsSwiper from "./projects-swipter";
-import Link from "next/link";
+import ProjectsSwiper from "./projects-swiper";
 import Popup from "@/components/shared/Popup";
 
 export default function ServiceDetails({ service }: { service: Service }) {
@@ -44,7 +41,7 @@ export default function ServiceDetails({ service }: { service: Service }) {
       </div>
 
       {/*//! Project */}
-      <ProjectsSwiper projects={service.ourWorks} />
+      <ProjectsSwiper />
 
       {/*//! Popup (view all projects) */}
       <div className="flex justify-center">

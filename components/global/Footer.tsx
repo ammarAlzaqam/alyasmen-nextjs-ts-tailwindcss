@@ -45,7 +45,7 @@ export default function Footer() {
           {/*//! Media links */}
           <div className="space-y-3">
             <h2 className="text-base-bold text-white">وسائل التواصل</h2>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-x-7 gap-y-4 sm:gap-2">
               {mediaLinks.map(({ route, label, Icon }) => (
                 <Link title={label} key={label} href={route} className="text-base text-white">
                   <button className="group cursor-pointer rounded-full p-2 border-[1.5px] border-white/25">

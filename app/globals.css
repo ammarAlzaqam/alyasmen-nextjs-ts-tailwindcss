@@ -272,6 +272,10 @@ no-scrollbar::-webkit-scrollbar {
     -webkit-mask-composite: xor;
     mask-composite: exclude;
   }
+
+  .bg-layer_img {
+    @apply -z-1 absolute top-0 opacity-50! left-0;
+  }
 }
 
 @layer components {
