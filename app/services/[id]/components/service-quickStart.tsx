@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -10,7 +11,8 @@ export default function ServiceQuickStart() {
           <h1 className="service-head_text">دعونا نعمل معاً</h1>
           <h3 className="subtitle max-w-[869px]">
             "نقدّم باقة من الخدمات الهندسية التي تغطي جميع مراحل المشروع، من
-            التصميم إلى التنفيذ، مع ضمان الجودة والالتزام والدقة في كل تفصيلة."{" "}
+            التصميم إلى التنفيذ، مع ضمان الجودة والالتزام والدقة في كل
+            تفصيلة."{" "}
           </h3>
         </div>
 

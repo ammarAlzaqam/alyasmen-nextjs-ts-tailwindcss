@@ -65,7 +65,7 @@ export default function ProjectsSwiper() {
           ref={scrollRef}
           className="flex snap-x snap-mandatory gap-2 sm:gap-5 overflow-x-auto no-scrollbar"
         >
-          {Array(9)
+          {Array(16)
             .fill(null)
             .map((_, index) => (
               <Image

@@ -33,14 +33,14 @@ export default function Popup() {
 
   const transApi = useSpringRef();
   const transition = useTransition(
-    open ? Array.from({ length: 99 }, (_, i) => i) : [],
+    open ? Array.from({ length: 236 }, (_, i) => i) : [],
     {
       ref: transApi,
       trail: 400 / Array.from({ length: 96 }, (_, i) => i).length,
       from: { opacity: 0, scale: 0 },
       enter: { opacity: 1, scale: 1 },
       leave: { opacity: 0, scale: 0 },
-    }
+    },
   );
 
   // This will orchestrate the two animations above, comment the last arg and it creates a sequence
@@ -66,7 +66,7 @@ export default function Popup() {
           grid
             ? "grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
             : "grid-cols-1 md:grid-cols-2",
-          !open && "p-0 overflow-hidden"
+          !open && "p-0 overflow-hidden",
         )}
         onClick={() => set((open) => !open)}
       >
@@ -74,7 +74,7 @@ export default function Popup() {
         <div
           className={cn(
             "col-span-full flex justify-between items-center transition-all duration-200",
-            !open && "max-h-0 max-w-0 opacity-0 scale-0"
+            !open && "max-h-0 max-w-0 opacity-0 scale-0",
           )}
         >
           <h1 className="text-heading2 md:text-[60px] text-primary-500">
