@@ -2,7 +2,6 @@ import mediaLinks from "@/constants/mediaLinks";
 import linksList from "@/constants/navigationLinks";
 import Image from "next/image";
 import Link from "next/link";
-import Popup from "../shared/Popup";
 
 export default function Footer() {
   return (

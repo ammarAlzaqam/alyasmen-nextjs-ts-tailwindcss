@@ -83,7 +83,10 @@ export default function Testimonials() {
     <div className="relative flex justify-center py-12 bg-primary-800">
       <div className="container flex flex-col gap-6 sm:gap-12 px-5 md:px-0">
         {/* Head Title */}
-        <div className="z-3 flex flex-col items-center gap-3">
+        <div
+          data-aos="fade-in"
+          className="z-3 flex flex-col items-center gap-3"
+        >
           {/* Title */}
           <div className="flex items-center gap-4">
             <Image
@@ -118,7 +121,7 @@ export default function Testimonials() {
         </div>
 
         {/* Swiper */}
-        <div className="relative z-3">
+        <div className="relative z-3" data-aos="fade-down">
           <Swiper
             modules={[Navigation, Autoplay]}
             loop={true}
@@ -238,7 +241,10 @@ export default function Testimonials() {
         </div>
 
         {/* Advantages */}
-        <div className="relative z-10 grid w-full grid-cols-2 gap-6 rounded-3xl bg-white px-4 py-8 shadow md:grid-cols-4 md:p-10 xl:mx-auto xl:max-w-10/12">
+        <div
+          data-aos="zoom-in"
+          className="relative z-10 grid w-full grid-cols-2 gap-6 rounded-3xl bg-white px-4 py-8 shadow md:grid-cols-4 md:p-10 xl:mx-auto xl:max-w-10/12"
+        >
           {testimonialsAdvList.map(({ title, label, des, icon }) => (
             <div
               key={label}
@@ -263,7 +269,7 @@ export default function Testimonials() {
           ))}
 
           {/* Dividers */}
-          <div className="absolute bottom-1/2 right-13 h-px w-1/3 translate-x-1/4 translate-y-1/2 bg-secondary-700/30 md:right-1/4 md:h-[30%] md:w-px md:translate-x-3/4" />
+          <div className="absolute bottom-1/2 right-0 h-px w-1/3 -translate-x-1/4 translate-y-1/2 bg-secondary-700/30 md:right-1/4 md:h-[30%] md:w-px md:translate-x-3/4" />
 
           <div className="absolute right-1/2 top-0 h-[31%] w-px translate-x-1/2 translate-y-1/3 bg-secondary-700/30 md:top-auto md:bottom-1/2 md:h-[30%] md:translate-y-1/2" />
 
@@ -287,7 +293,7 @@ export default function Testimonials() {
         alt="testimonials-background"
         width={768}
         height={500}
-        className="absolute bottom-0 left-0 z-1 h-250 w-full object-cover opacity-80 sm:hidden"
+        className="absolute bottom-0 left-0 z-1 h-150 w-full object-cover opacity-80 sm:hidden"
       />
 
       <div className="absolute bottom-0 left-0 z-2 h-20 w-full bg-linear-to-t from-primary-500 to-transparent sm:h-50" />

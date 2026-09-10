@@ -8,7 +8,10 @@ export default function AboutSec() {
       <div className="main-container">
         <div className="pt-24 md:pt-48 pb-32 md:pb-64 flex max-md:flex-col items-center justify-center max-md:gap-20 lg:-space-x-6">
           {/*//! Text */}
-          <div className="z-2 relative max-md:text-center space-y-4">
+          <div
+            data-aos="fade-in"
+            className="z-2 relative max-md:text-center space-y-4"
+          >
             {/*//* Q overlay image */}
             <Image
               src="/assets/home/about-sec/q.png"
@@ -35,7 +38,7 @@ export default function AboutSec() {
               <Button className="btn-light w-full!">تطلع على خدماتنا</Button>
             </Link>
           </div>
-          <div className="">
+          <div data-aos="fade-up">
             <Image
               src="/assets/home/about-sec/side2.png"
               alt="al-yasmeen"

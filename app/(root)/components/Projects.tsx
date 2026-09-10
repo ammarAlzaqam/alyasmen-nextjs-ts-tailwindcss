@@ -18,7 +18,10 @@ export default function Projects() {
     <div className="flex justify-center pt-9 pb-12 bg-primary-800">
       <div className="container grid grid-cols-5 gap-8">
         {/* head title */}
-        <div className="col-span-5 md:col-span-2 flex flex-col gap-4 px-5 md:px-0">
+        <div
+          data-aos="fade-in"
+          className="col-span-5 md:col-span-2 flex flex-col gap-4 px-5 md:px-0"
+        >
           <div className="flex items-center gap-5">
             <h1 className="title text-white">أعمالنا</h1>
             <Image
@@ -44,7 +47,7 @@ export default function Projects() {
           </div>
         </div>
         {/* project swiper */}
-        <div className="col-span-5 md:col-span-3">
+        <div data-aos="zoom-out" className="col-span-5 md:col-span-3">
           <WorksSwiper />
         </div>
       </div>
