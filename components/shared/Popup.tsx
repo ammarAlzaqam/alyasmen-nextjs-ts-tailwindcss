@@ -62,7 +62,7 @@ export default function Popup() {
       <animated.div
         style={{ ...rest, width: size, height: size }}
         className={cn(
-          "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-dvh z-50 w-full overflow-y-auto overflow-x-hidden grid gap-3 p-2",
+          "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-dvh z-150 w-full overflow-y-auto overflow-x-hidden grid gap-3 p-2",
           grid
             ? "grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
             : "grid-cols-1 md:grid-cols-2",
