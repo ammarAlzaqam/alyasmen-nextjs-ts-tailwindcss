@@ -9,8 +9,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { Button } from "@/components/ui/button";
-import { IoArrowBack } from "react-icons/io5";
 import Popup from "@/components/shared/Popup";
 
 export default function Projects() {
@@ -171,15 +169,12 @@ function WorksSwiper() {
         breakpoints={{
           640: {
             slidesPerView: 1.8,
-            spaceBetween: 4,
           },
           1024: {
             slidesPerView: 2.2,
-            spaceBetween: 4,
           },
           1280: {
             slidesPerView: 2.6,
-            spaceBetween: 0,
           },
         }}
         className="!overflow-visible"

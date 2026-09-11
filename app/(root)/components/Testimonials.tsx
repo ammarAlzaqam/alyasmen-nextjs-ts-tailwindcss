@@ -20,31 +20,25 @@ const testimonialsList = [
     userImg: "/assets/testimonials/1.jpeg",
   },
   {
-    img: "/assets/testimonials/1.jpeg",
+    img: "/assets/testimonials/2.jpeg",
     name: "",
     city: "",
     userImg: "/assets/testimonials/1.jpeg",
   },
   {
-    img: "/assets/testimonials/1.jpeg",
+    img: "/assets/testimonials/3.jpeg",
     name: "",
     city: "",
     userImg: "/assets/testimonials/1.jpeg",
   },
   {
-    img: "/assets/testimonials/1.jpeg",
+    img: "/assets/testimonials/4.jpeg",
     name: "",
     city: "",
     userImg: "/assets/testimonials/1.jpeg",
   },
   {
-    img: "/assets/testimonials/1.jpeg",
-    name: "",
-    city: "",
-    userImg: "/assets/testimonials/1.jpeg",
-  },
-  {
-    img: "/assets/testimonials/1.jpeg",
+    img: "/assets/testimonials/5.jpeg",
     name: "",
     city: "",
     userImg: "/assets/testimonials/1.jpeg",
@@ -110,13 +104,12 @@ export default function Testimonials() {
 
           {/* Sub Title */}
           <h2 className="text-center text-[32px] text-white font-bold">
-            ما يقوله عملاؤنا عن إطلالة
+            ما يقوله عملاؤنا عن الياسمين
           </h2>
 
-          {/* Description */}
           <p className="max-w-md text-center leading-[200%] text-primary-100">
-            نفخر بثقة عملائنا ورضاهم عن تجربتهم معنا، إليكم بعض من آرائهم بعد
-            قضاء أوقات مميزة في بورتو مطروح
+            نفخر بثقة عملائنا ورضاهم عن جودة أعمالنا، إليكم بعض من آرائهم
+            وتجاربهم معنا في التصميم والتشطيبات والديكور
           </p>
         </div>
 
